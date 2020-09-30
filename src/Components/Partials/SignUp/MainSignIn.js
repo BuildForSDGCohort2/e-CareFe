@@ -26,7 +26,6 @@ export class SignInModal extends Component {
                                 </button>
                                 <div className="">
                                     <div className="sign-left position-relative">
-                                        {/* <img src={Img1} className="background" alt="deco-background" /> */}
                                         <img src={Img2} className="logo postion-absolute" alt="logo" />
                                         <div className="contents d-flex flex-column justify-content-center h-100">
                                             <h4>Welcome!</h4>

@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import axios from 'axios';
+import { withRouter } from 'react-router-dom';
 
 import "react-web-tabs/dist/react-web-tabs.css";
 import { Tabs, Tab, TabPanel, TabList } from "react-web-tabs";
@@ -23,6 +25,36 @@ const SignupSchema = Yup.object().shape({
   });
 
 export class SignUp extends Component {
+  state = {
+    email: "",
+    password: ""
+  }
+  handleChange = (e) => {
+    this.setState({
+      [e.target.name]: e.target.value
+    })
+  }
+  handleLogin = e => {
+    e.preventDefault();
+    axios.post('http://api.ecare.ml/v1/auth/patientlogin',
+      {
+        email: this.state.email,
+        password: this.state.password
+      }
+    ).then(res => {
+      if(res.status === 200){
+        this.props.history.push('/dashboard/patient')
+      }
+    }).catch(function (error) {
+      console.log(error);
+    });
+
+    this.setState({
+      email: "",
+      password: ""
+    })
+  }
+ 
   render() {
     return (
       <div>
@@ -82,12 +114,14 @@ export class SignUp extends Component {
                 }}
               >
                 {({ errors, touched }) => (
-                  <Form>
-                    <Field name="username" className="form-control mb-2" />
-                    {errors.username && touched.username ? (
-                      <div>{errors.username}</div>
+                  <Form onSubmit={this.handleLogin}> 
+                    <Field value={this.state.email} onChange={this.handleChange} name="email" className="form-control mb-2" />
+                    {errors.email && touched.email ? (
+                      <div>{errors.email}</div>
                     ) : null}
                     <Field
+                      value={this.state.password}
+                      onChange={this.handleChange}
                       name="password"
                       type="password"
                       className="form-control mb-2"
@@ -151,4 +185,4 @@ export class SignUp extends Component {
   }
 }
 
-export default SignUp;
+export default withRouter(SignUp);
