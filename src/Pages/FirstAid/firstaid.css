@@ -45,7 +45,9 @@
   }
   
   #first-aid #iframe-container iframe {
-    margin-left: 90px !important;
+    margin-left: 0 !important;
+      margin-right: 0 !important;
+      width: 100%;
   }
   
   #first-aid #section3 p {
@@ -164,8 +166,9 @@
       padding: 0 !important;
     }
     #first-aid #iframe-container iframe {
-      margin-left: 30px !important;
-      margin-right: 30px !important;
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+      width: 100%;
     }
     #first-aid #section3 h4 {
       margin-left: 0px;

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import MainHeader from '../../Components/Partials/MainHeader/MainHeader'
-import "./firstaid.css";
+//import "./firstaid.css";
 export default class FirstAidDetailsPage extends Component {
   render() {
     return (
@@ -69,7 +69,6 @@ export default class FirstAidDetailsPage extends Component {
             </div>
           </div>
         </div>
- 
       </div>
     );
   }

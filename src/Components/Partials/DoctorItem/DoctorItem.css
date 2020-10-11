@@ -23,3 +23,10 @@
     color: #007D85;
     font-weight: bold;
 }
+
+@media only screen and (max-width: 540px) {
+    .doctor-item{
+        width: 90% !important;
+        margin: 10 auto !important;
+    }
+  }

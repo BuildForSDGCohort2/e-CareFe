@@ -28,3 +28,11 @@ width:20vw;
 .lab-nav{
   border-right: none !important;
 }
+
+@media only screen and (max-width: 540px) {
+  .navigation-panel {
+    display: none !important
+  }
+}
+
+

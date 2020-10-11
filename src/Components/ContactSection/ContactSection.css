@@ -1,66 +1,82 @@
+.send-message {
+  background: #007d85;
+  color: #fff;
+  padding: 5px;
+  display: inline-block;
+  width: 100px;
+  position: absolute;
+  bottom: -5px;
+  border-radius: 5px;
+}
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  min-width: 400px;
+  position: relative;
+  margin-right: 10px;
+}
+.contact-form input {
+  color: #007d85;
+  background: #c4c4c4;
+  border-radius: 5px;
+  min-width: 400px;
+  padding: 10px;
+  margin: 20px 0;
+  border: none;
+  box-shadow: 2px 2px #c4c4c4;
+}
+.contact-section {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  padding: 80px 50px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.contact-side-text {
+  color: #c4c4c4;
+  width: 400px;
+  text-align: center;
+}
 
-.send-message{
-    background: #007D85;
-    color: #fff;
-    padding: 5px;
-    display: inline-block;
-    width: 100px;
-    position: absolute;
-    right: 10px;
-    bottom: -5px;
-    border-radius: 5px;
+.contact-side-text p {
+  background: #c4c4c4;
+  color: black;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: justify;
 }
-.contact-form{
-    display: flex;
-    flex-direction: column;
-    min-width: 400px;
-    position: relative;
-    margin-right: 10px;
+
+.message-area {
+  color: #007d85;
+  background: #c4c4c4;
+  padding: 10px;
+  min-width: 400px;
+  height: 200px;
+  margin: 20px 0;
+  border: none;
+  box-shadow: 2px 2px #c4c4c4;
 }
-.contact-form input{
-    color: #007D85;
-    background: #C4C4C4;
-    border-radius: 5px;
-    min-width: 400px;
-    padding: 10px;
-    margin: 20px 0;
-    border: none;
-    box-shadow: 2px 2px #C4C4C4;
+
+.adviser {
+  display: flex;
 }
-.contact-section{
+
+@media only screen and (max-width: 540px) {
+  .contact-section {
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    padding: 80px 50px;
+    padding: 80px 20px;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-}
-.contact-side-text{
-    color: #C4C4C4;
-    width: 400px;
-    text-align: center;
-}
-
-.contact-side-text p{
-    background: #C4C4C4;
-    color: black;
-    padding: 30px;
-    border-radius: 10px;
-    text-align: justify;
-}
-
-.message-area{
-    color: #007D85;
-    background: #C4C4C4;
-    padding: 10px;
-    min-width: 400px;
-    height: 200px;
-    margin: 20px 0;
-    border: none;
-    box-shadow: 2px 2px #C4C4C4;
-}
-
-.adviser{
-    display: flex;
+  }
+  .contact-form {
+    min-width: 100% !important;
+  }
+  .contact-form input, .message-area  {
+    min-width: 100% !important;
+  }
 }
