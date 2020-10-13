@@ -40,7 +40,6 @@ export default class FirstAid extends Component {
               <div className="col-md-6">
                 <div id="iframe-container">
                   <iframe
-                    width="420"
                     height="315"
                     src="https://www.youtube.com/embed/tgbNymZ7vqY"
                   ></iframe>

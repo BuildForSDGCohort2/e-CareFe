@@ -1,145 +1,173 @@
 
 h4{
-    margin-left: 0 !important;
+  margin-left: 0 !important;
 }
 #contactus {
-  background: #c8daec;
+background: #c8daec;
 }
 #contactus #banner {
-  background-image: url(../../Images/contactus-background.jpg);
-  width: 100% !important;
-  height: 129vh !important;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+background-image: url(../../Images/contactus-background.jpg);
+width: 100% !important;
+height: 129vh !important;
+background-repeat: no-repeat;
+background-position: center;
+background-size: cover;
 }
 
 .banner-inner {
-  color: #fff;
-  margin-left: 50px;
-  width: 300px !important;
-  padding-top: 100px;
+color: #fff;
+margin-left: 50px;
+width: 300px !important;
+padding-top: 100px;
 }
 
 .banner-inner h4 {
-  font-family: "Rubik";
-  font-style: normal;
-  font-weight: normal;
-  font-size: 48px;
-  line-height: 71px;
-  letter-spacing: 0.02em;
+font-family: "Rubik";
+font-style: normal;
+font-weight: normal;
+font-size: 48px;
+line-height: 71px;
+letter-spacing: 0.02em;
 
-  color: #ffffff;
+color: #ffffff;
 }
 
 .banner-inner p {
-  font-family: "Rubik";
-  font-style: normal;
-  font-weight: normal;
-  font-size: 18px;
-  letter-spacing: 0.01em;
+font-family: "Rubik";
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+letter-spacing: 0.01em;
 
-  color: #ffffff;
+color: #ffffff;
 }
 
 .banner-inner button {
-  background: #1d3557;
-  border-radius: 5px;
-  color: #fff;
+background: #1d3557;
+border-radius: 5px;
+color: #fff;
 }
 
 #contactus-form {
-  background: #38858a;
-  border-top-left-radius: 40px;
-  border-bottom-right-radius: 40px;
-  padding: 60px 50px 40px 50px;
-  font-family: "Roboto";
-  width: 500px;
-  margin-right: 70px;
-  margin-top: 56px !important;
+background: #38858a;
+border-top-left-radius: 40px;
+border-bottom-right-radius: 40px;
+padding: 60px 50px 40px 50px;
+font-family: "Roboto";
+width: 500px;
+margin-right: 70px;
+margin-top: 56px !important;
 }
 
 #contactus-form .form-group {
-  position: relative;
+position: relative;
 }
 
 #contactus-form h4 {
-  font-family: "Rubik";
-  font-style: normal;
-  font-weight: bold;
-  font-size: 28px;
-  line-height: 36px;
-  letter-spacing: 0.02em;
-  color: #ffffff;
-  margin-bottom: 25px;
-  margin-left: 0 !important;
+font-family: "Rubik";
+font-style: normal;
+font-weight: bold;
+font-size: 28px;
+line-height: 36px;
+letter-spacing: 0.02em;
+color: #ffffff;
+margin-bottom: 25px;
+margin-left: 0 !important;
 }
 
 #contactus-form input,
 #contactus-form textarea {
-  background: none !important;
-  border: none !important;
-  border-bottom: 3px solid #d4d4d4 !important;
-  border-radius: 0 !important;
-  box-shadow: 0px 0px #ffffff !important;
+background: none !important;
+border: none !important;
+border-bottom: 3px solid #d4d4d4 !important;
+border-radius: 0 !important;
+box-shadow: 0px 0px #ffffff !important;
 }
 #contactus-form input:focus ~ label,
 #contactus-form textarea:focus ~ label {
-  font-size: 0.75rem;
-  transform: translateY(-12px);
+font-size: 0.75rem;
+transform: translateY(-12px);
 
-  top: -5px;
+top: -5px;
 }
 
 #contactus label {
-  font-size: 1.1rem;
-  transform: translateY(0);
-  display: block;
-  font-weight: normal;
-  left: 0;
-  margin: 0;
-  padding: 6px 12px 0 0;
-  position: absolute;
-  top: 0;
-  transition: all 0.4s;
-  color: #fff;
+font-size: 1.1rem;
+transform: translateY(0);
+display: block;
+font-weight: normal;
+left: 0;
+margin: 0;
+padding: 6px 12px 0 0;
+position: absolute;
+top: 0;
+transition: all 0.4s;
+color: #fff;
 }
 
 #contactus-form button {
-  margin-top: 10px;
-  background: #2f3d6c;
-  font-size: 18px;
-  text-transform: uppercase;
+margin-top: 10px;
+background: #2f3d6c;
+font-size: 18px;
+text-transform: uppercase;
 }
 
 #contactus-form ::placeholder {
-  color: rgb(255, 255, 255);
+color: rgb(255, 255, 255);
 }
 
 #contactus .sect-1 {
-  background: #fff;
-  width: 450px;
-  border-radius: 40px;
-  padding: 20px 30px;
-  height: 660px !important;
-  margin-top: 30px;
+background: #fff;
+width: 450px;
+border-radius: 40px;
+padding: 20px 30px;
+height: 660px !important;
+margin-top: 30px;
 }
 
 #contactus .sect-1 h4 {
-  font-family: "Rubik";
-  font-style: normal;
-  font-weight: normal;
-  font-size: 28px;
-  line-height: 23px;
-  margin-bottom: 0 !important;
-  color: #000000;
+font-family: "Rubik";
+font-style: normal;
+font-weight: normal;
+font-size: 28px;
+line-height: 23px;
+margin-bottom: 0 !important;
+color: #000000;
 }
 
 #contactus .sect-1 p {
-  background: #fff;
+background: #fff;
 }
 
 #contactus .sect-2 {
-  margin-top: 250px !important;
-  margin-bottom: 70px;
+margin-top: 250px !important;
+margin-bottom: 70px;
+}
+
+@media only screen and (max-width: 1080px) {
+#contactus-form-container{
+  display: block !important;
+  width: 100%;
+}
+#contactus-form{
+  margin-top: 0;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  margin-bottom: 80px !important;
+}
+#row1{
+  display: none !important;
+}
+#contactus #banner {
+  height: 100% !important;
+}
+}
+
+@media only screen and (max-width: 600px) {
+#contactus-form {
+  width: 90% !important;
+  margin-left: 5% !important;
+  margin-right: 5% !important;
+  padding: 60px 20px 40px 20px;
+}
 }

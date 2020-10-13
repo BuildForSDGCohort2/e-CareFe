@@ -6,7 +6,7 @@ import CustomButton from '../CustomButton/CustomButton';
 export default () => {
     return (
         <div className="emergency-number">
-            <img src="./Images/ambulance.png" alt="Ambulance" width="400px"/>
+            <img src="./Images/ambulance.png" alt="Ambulance" id="Ambulance"/>
             <div className="ambulance-contact">
                 <h5 className="head-text">EMERGENCY AMBULANCE SERVICE</h5>
                 <p>Call Us: 0011/0102/0121</p>

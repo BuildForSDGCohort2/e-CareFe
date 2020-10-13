@@ -1,44 +1,44 @@
 .covid-overview{
-    margin: 25px auto;
-    width: 95vw;
-    background: #000;
-    color:#fff;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    padding: 5px 10px;
-    border-radius: 10px;
-    position: relative;
-}
-.covid-record{
-  width: 70vw;
   margin: 25px auto;
+  width: 95vw;
   background: #000;
   color:#fff;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  padding: 0 10px;
+  padding: 5px 10px;
   border-radius: 10px;
-}
-.corona-logo{
   position: relative;
 }
+.covid-record{
+width: 70vw;
+margin: 25px auto;
+background: #000;
+color:#fff;
+display: flex;
+justify-content: space-between;
+align-items: center;
+flex-wrap: wrap;
+padding: 0 10px;
+border-radius: 10px;
+}
+.corona-logo{
+position: relative;
+}
 .covid-overview div{
-    text-align: center;
-    margin: 0 5px;
+  text-align: center;
+  margin: 0 5px;
 }
 .covid-overview p{
-    font-size: 25px;
-    letter-spacing: 3px;
-    font-weight: bold;
+  font-size: 25px;
+  letter-spacing: 3px;
+  font-weight: bold;
 }
 .corona-logo p{
- position: absolute;
- right: 30px;
- bottom: 0;
+position: absolute;
+right: 30px;
+bottom: 0;
 }
 
 .active-cases p{
@@ -46,23 +46,23 @@ color: skyblue;
 }
 
 .total-cases p{
-  color: yellow;
+color: yellow;
 }
 
 .recovered p{
- color: lime;
+color: lime;
 }
 
 .deaths p{
-    color: red;
+  color: red;
 }
 
 .know-more{
-  background: #007D85;
-  color: #fff;
-  padding: 5px;
-  position: absolute;
-  right: 10px;
-  bottom: -15px;
-  border-radius: 5px;
+background: #007D85;
+color: #fff;
+padding: 5px;
+position: absolute;
+right: 10px;
+bottom: -15px;
+border-radius: 5px;
 }

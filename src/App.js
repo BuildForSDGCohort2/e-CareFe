@@ -10,7 +10,7 @@ import "./App.css";
 import "../node_modules/slick-carousel/slick/slick.css";
 
 import Signin from './Components/Partials/SignUp/MainSignIn'
-import MainHeader from './Components/Partials/MainHeader/MainHeader';
+//import MainHeader from './Components/Partials/MainHeader/MainHeader';
 import HomePage from "./Pages/HomePage/HomePage";
 import Booking from "./Components/Booking/Booking";
 import MainFooter from './Components/Partials/MainFooter/MainFooter';

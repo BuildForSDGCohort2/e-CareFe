@@ -11,12 +11,12 @@
     line-height: 47px;
     text-transform: capitalize;
     color: #FB5B45 !important;
-    margin: 50px auto !important;
+    margin: 20px auto !important;
   }
 
   @media only screen and (max-width: 540px) {
     .heading {
       font-size: 30px;
-      margin: 70px auto !important;
+      margin: 10px auto !important;
     }
   }

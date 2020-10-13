@@ -1,61 +1,37 @@
 import React, { Component } from "react";
-import axios from 'axios';
-import { withRouter } from 'react-router-dom';
+//import axios from "axios";
+import { withRouter, Redirect } from "react-router-dom";
 
 import "react-web-tabs/dist/react-web-tabs.css";
 import { Tabs, Tab, TabPanel, TabList } from "react-web-tabs";
 
-import { Formik, Field, Form, ErrorMessage } from 'formik';
-import * as Yup from 'yup';
+import { Formik, Field, Form, ErrorMessage } from "formik";
+import * as Yup from "yup";
 
 import Img1 from "../../../Images/facebook.png";
 import Img3 from "../../../Images/google.png";
 import Img4 from "../../../Images/circle1.png";
 import Img5 from "../../../Images/circle2.png";
 
+import axiosInstance from '../../../Constants'
+
 const SignupSchema = Yup.object().shape({
-    username: Yup.string()
-      .min(2, 'Too Short!')
-      .max(50, 'Too Long!')
-      .required('Required'),
-    password: Yup.string()
-      .min(2, 'Too Short!')
-      .max(50, 'Too Long!')
-      .required('Required'),
-  });
+  email: Yup.string().email("Invalid Email").required("Required"),
+  password: Yup.string()
+    .min(2, "Too Short!")
+    .max(50, "Too Long!")
+    .required("Required"),
+});
 
 export class SignUp extends Component {
   state = {
-    email: "",
-    password: ""
-  }
-  handleChange = (e) => {
-    this.setState({
-      [e.target.name]: e.target.value
-    })
-  }
-  handleLogin = e => {
-    e.preventDefault();
-    axios.post('http://api.ecare.ml/v1/auth/patientlogin',
-      {
-        email: this.state.email,
-        password: this.state.password
-      }
-    ).then(res => {
-      if(res.status === 200){
-        this.props.history.push('/dashboard/patient')
-      }
-    }).catch(function (error) {
-      console.log(error);
-    });
+    loggedIn: false,
+  };
 
-    this.setState({
-      email: "",
-      password: ""
-    })
-  }
- 
   render() {
+    if (this.state.loggedIn) {
+      return <Redirect to="/patient/dashboard" />;
+    }
     return (
       <div>
         <div className="form-box">
@@ -104,30 +80,64 @@ export class SignUp extends Component {
               <h6 className="division">or</h6>
               <Formik
                 initialValues={{
-                  username: "",
+                  email: "",
                   password: "",
                 }}
                 validationSchema={SignupSchema}
-                onSubmit={(values) => {
+                onSubmit={(values, { setSubmitting, setFieldError }) => {
+                  setSubmitting(true);
                   // same shape as initial values
                   console.log(values);
+
+                  axiosInstance.post("v1/auth/patientlogin", {
+                      email: values.email,
+                      password: values.password,
+                    })
+                    .then((response) => {
+                      console.log(response.data);
+                      if (response.status === 200) {
+                        //console.log(response.data);
+                        setSubmitting(false);
+                        console.log("lOGGING in");
+                        //this.props.history.replace("/index");
+                        this.setState({
+                          loggedIn: true
+                        })
+                      }
+                    })
+                    .catch((error) => {
+                      if (error.response) {
+                        setSubmitting(false);
+                        setFieldError("error", "Invalid Username or password")
+                        console.log("Invalid Username or password")
+                        console.log(error.response.data);
+                        console.log(error.response.status);
+                        console.log(error.response.headers);
+                      } else if (error.request) {
+                        console.log(error.request);
+                      } else {
+                        console.log("Error", error.message);
+                      }
+                      console.log(error.config);
+                    });
                 }}
               >
                 {({ errors, touched }) => (
-                  <Form onSubmit={this.handleLogin}> 
-                    <Field value={this.state.email} onChange={this.handleChange} name="email" className="form-control mb-2" />
+                  <Form>
+                    {errors.error && touched.email ? (
+                      <div className="red">{errors.error}</div>
+                    ) : null}
+                    <Field name="email" className="form-control mb-2" />
                     {errors.email && touched.email ? (
-                      <div>{errors.email}</div>
+                      <div className="red">{errors.email}</div>
                     ) : null}
                     <Field
-                      value={this.state.password}
-                      onChange={this.handleChange}
                       name="password"
                       type="password"
                       className="form-control mb-2"
                     />
                     {errors.password && touched.password ? (
-                      <div>{errors.password}</div>
+                      <div className="red">{errors.password}</div>
                     ) : null}
                     <button type="submit" className="next-btn">
                       Submit
@@ -141,11 +151,11 @@ export class SignUp extends Component {
                 <div className="radio-inputs">
                   <input
                     type="radio"
-                    checked="checked"
-                    id="male"
                     name="gender"
                     className="form mr-2"
-                    value="male"
+                    value="Hospital"
+                    checked={this.props.accountType === "Hospital"}
+                    onChange={this.props.setAccountType}
                   />
                   <label>Register as Hospital, Clinic</label>
                   <br />
@@ -155,14 +165,14 @@ export class SignUp extends Component {
                     alt="deco-background"
                   />
                 </div>
-                <p>Patients Click Here</p>
+                <p>Hospital Click Here</p>
                 <div className="radio-inputs mt-3">
                   <input
                     type="radio"
-                    id="female"
-                    name="gender"
                     className="form mr-2"
-                    value="female"
+                    value="Patient"
+                    checked={this.props.accountType === "Patient"}
+                    onChange={this.props.setAccountType}
                   />
                   <label>Register as a Patient</label>
                   <br />
@@ -170,6 +180,9 @@ export class SignUp extends Component {
                     src={Img5}
                     className="background2 position-absolute"
                     alt="deco-background"
+                    value="Patient"
+                    checked={this.props.accountType === "Patient"}
+                    onChange={this.props.setAccountType}
                   />
                 </div>
                 <p>Patients Click Here</p>

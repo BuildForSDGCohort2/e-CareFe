@@ -18,7 +18,7 @@ export default class ContactUs extends Component {
             <button className="btn">Book an Appointment</button>
           </div>
 
-          <div className="d-flex justify-content-end">
+          <div className="d-flex justify-content-end" id="contactus-form-container">
             <form id="contactus-form">
               <div className="form-group">
                 <h4>GET IN TOUCH WITH E-CARE</h4>
@@ -53,7 +53,7 @@ export default class ContactUs extends Component {
           </div>
         </div>
 
-        <div className="row m-0">
+        <div className="row m-0" id="row1">
           <div className="col-md-6 col-sm-12 d-flex justify-content-center">
             <div className="sect-1">
               <div className="d-flex">
@@ -113,7 +113,7 @@ export default class ContactUs extends Component {
               </div>
             </div>
           </div>
-          <div className="col-md-6 col-sm-12">
+          <div className="col-md-6 col-sm-12" id="sect-2-con">
             <div className="sect-2">
               <img src="images/contactus_img.png"></img>
             </div>

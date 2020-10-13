@@ -9,3 +9,11 @@
     color: #FB5B45 !important;
     margin: 50px auto !important;
   }
+
+  @media only screen and (max-width: 540px) {
+    .main-heading{
+      font-size: 28px;
+      line-height: 35px;
+      margin: 18px auto !important;
+    }
+  }

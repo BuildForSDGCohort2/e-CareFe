@@ -17,6 +17,8 @@ export class SignUpSwitch extends Component {
         count: 1,
         secondCount: 0,
         thirdCount: 0,
+
+        accountType: "Hospital"
     }
     // Moving to next step
     nextStep = () => {
@@ -44,6 +46,16 @@ export class SignUpSwitch extends Component {
             thirdCount: thirdCount + 1
         });
     }
+
+
+    setAccountType = (e) => {
+        const { value } = e.target;
+        console.log("value", value)
+        this.setState({
+            accountType: value
+        })
+    }
+
     render() {
         const { step } = this.state
         const { count } = this.state
@@ -54,6 +66,8 @@ export class SignUpSwitch extends Component {
                 return (
                     <SignUp
                         nextStep={this.nextStep}
+                        setAccountType={this.setAccountType}
+                        accountType={this.state.accountType}
                     />
                 );
             case 2:
